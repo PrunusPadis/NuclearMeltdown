@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -1.296, y: 0.29494035, z: -1.5538777}
-  m_LocalScale: {x: 6.85, y: 6.85, z: 6.85}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 420028109023016007}
@@ -50,8 +50,8 @@ MonoBehaviour:
   value: 7787
   maxValue: 20000
   minValue: 0
-  maxRotation: -140
-  minRotation: 140
+  maxRotation: 140
+  minRotation: -140
   targetIndex: 0
   target: {fileID: 4991057571387713657}
 --- !u!1001 &2460209084306066422
@@ -124,7 +124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7451108045906912143, guid: 2a480b31886474e43b674da234dd1157, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.267087
+      value: -0.267087
       objectReference: {fileID: 0}
     - target: {fileID: 7451108045906912143, guid: 2a480b31886474e43b674da234dd1157, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
