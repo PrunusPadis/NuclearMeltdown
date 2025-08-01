@@ -467,7 +467,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3380179283471934934, guid: f7a87dd7eb75a7d4c9e4507feae9ec18, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000000032681544
+      value: -0.0000000012077962
       objectReference: {fileID: 0}
     - target: {fileID: 3380179283471934934, guid: f7a87dd7eb75a7d4c9e4507feae9ec18, type: 3}
       propertyPath: m_LocalPosition.y
@@ -475,7 +475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3380179283471934934, guid: f7a87dd7eb75a7d4c9e4507feae9ec18, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.08277841
+      value: -0.08279461
       objectReference: {fileID: 0}
     - target: {fileID: 5361765705236279122, guid: f7a87dd7eb75a7d4c9e4507feae9ec18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -523,11 +523,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5773246762167577182, guid: f7a87dd7eb75a7d4c9e4507feae9ec18, type: 3}
       propertyPath: maxValue
-      value: 10000
+      value: 40000
       objectReference: {fileID: 0}
     - target: {fileID: 5773246762167577182, guid: f7a87dd7eb75a7d4c9e4507feae9ec18, type: 3}
       propertyPath: sensitivity
-      value: 1
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5773246762167577182, guid: f7a87dd7eb75a7d4c9e4507feae9ec18, type: 3}
       propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.size

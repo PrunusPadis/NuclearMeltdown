@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1239260408787824183}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0000000031717338, y: 0, z: -0.06307835}
+  m_LocalPosition: {x: -0.0000000012077962, y: 0, z: -0.08279461}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -75,11 +75,23 @@ MonoBehaviour:
       m_Calls: []
   OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
-  maxValue: 10.95
+      m_Calls:
+      - m_Target: {fileID: 634960402410323356}
+        m_TargetAssemblyTypeName: ReactorSwitch, Assembly-CSharp
+        m_MethodName: ApplyChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  maxValue: 40000
   minValue: 0
   value: 1.32
-  sensitivity: 0.01
+  sensitivity: 40
   maxPosAnchor: {fileID: 7425634177619926676}
   minPosAnchor: {fileID: 4426115756228672595}
 --- !u!1 &1467303630403549936
@@ -242,6 +254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5361765705236279122}
+  - component: {fileID: 634960402410323356}
   m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
@@ -265,6 +278,20 @@ Transform:
   - {fileID: 7285845223045230893}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &634960402410323356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5594359126962336150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1e37b87161773c47a69b98b19c678c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valueType: 0
+  index: 0
 --- !u!1 &7565473638191817429
 GameObject:
   m_ObjectHideFlags: 0
