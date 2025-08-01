@@ -46,6 +46,7 @@ public class ReactorMeter : MonoBehaviour
     protected virtual void UpdateMeterVisual()
     {
         float normalizedValue = value / (maxValue - minValue);
+       
         float angle = Mathf.Lerp(minRotation, maxRotation, normalizedValue);
         target.localRotation = Quaternion.Euler(new Vector3(0, 0, angle));
 

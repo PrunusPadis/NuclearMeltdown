@@ -25,6 +25,7 @@ public class ScenarioManager : MonoBehaviour
 
     private void Start()
     {
+        reactor = ReactorInternals.Instance;
         currentLevel = scenario[levelIndex]; //for easy testing
         timeLeft = currentLevel.dialogue.duration;
 
@@ -47,13 +48,13 @@ public class ScenarioManager : MonoBehaviour
         {
             
             levelIndex++;
-            Debug.Log("Next level " + levelIndex);
+           
             if (levelIndex >= scenario.Count)
             {
                 GameEnd();
                 return;
             }
-            
+            Debug.Log("Next level " + levelIndex);
             currentLevel = scenario[levelIndex];
             PlayScenarioDialogue(currentLevel);
         }

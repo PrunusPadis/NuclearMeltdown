@@ -44,14 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb209bec679f7014a9b1ffe3bef149b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reactor: {fileID: 0}
   scenario:
   - requirment: {fileID: 0}
     dialogue: {fileID: 11400000, guid: 5deaab5b3dba922448d7b393016d0dec, type: 2}
-  - requirment: {fileID: 11400000, guid: f299edbc0374cec4c894e9a662f1be78, type: 2}
-    dialogue: {fileID: 11400000, guid: c298dc01cef88594da1ac0bfa475a1b4, type: 2}
   - requirment: {fileID: 11400000, guid: 61e7a1b1e725c014d8f0991bc7435dea, type: 2}
+    dialogue: {fileID: 11400000, guid: c298dc01cef88594da1ac0bfa475a1b4, type: 2}
+  - requirment: {fileID: 11400000, guid: f299edbc0374cec4c894e9a662f1be78, type: 2}
     dialogue: {fileID: 11400000, guid: 8d7780f7cf670d040a93100a50f85de1, type: 2}
   - requirment: {fileID: 11400000, guid: 41907c7f831f7c64f8f640aa40f4a841, type: 2}
     dialogue: {fileID: 11400000, guid: 3aafe1202554ba4449ea2859049dc1c8, type: 2}
   - requirment: {fileID: 0}
     dialogue: {fileID: 11400000, guid: b12c41e06a301834dac3fe7859287c31, type: 2}
+  levelIndex: 0
