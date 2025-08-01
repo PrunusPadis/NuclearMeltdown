@@ -1,10 +1,13 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public class SubtitleManager : MonoBehaviour
 {
 
     public static SubtitleManager Instance;
+
+    public GameObject SubtitleText;
 
     private void Awake()
     {
@@ -13,14 +16,8 @@ public class SubtitleManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    public static void PlaySubtitles(SubtitleText subtitleText)
+    public void PlaySubtitles(string text)
     {
-
+        SubtitleText.GetComponent<TextMeshProUGUI>().text = text;
     }
-}
-
-[Serializable]
-public class SubtitleText
-{
-    [SerializeField] public string text;
 }
