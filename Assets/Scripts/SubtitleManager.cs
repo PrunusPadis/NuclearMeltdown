@@ -20,4 +20,9 @@ public class SubtitleManager : MonoBehaviour
     {
         SubtitleText.GetComponent<TextMeshProUGUI>().text = text;
     }
+
+    public void ClearSubtitles()
+    {
+        SubtitleText.GetComponent<TextMeshProUGUI>().text = "";
+    }
 }
