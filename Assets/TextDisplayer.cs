@@ -12,6 +12,6 @@ public class TextDisplayer : MonoBehaviour
 
     public void ClearText()
     {
-        textMeshPro.text = "";
+        textMeshPro.text = "Press red button to start.";
     }
 }
