@@ -1,0 +1,114 @@
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
+
+public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler
+{
+    public GameObject manual;
+    public GameObject pagesParent;
+    public HideManual hideManualCollider;
+
+    public List<GameObject> pages;
+
+    private Vector3 targetPos = Vector3.negativeInfinity;
+    private bool updatePos = false;
+    private float minDistance = 0.001f;
+    private float speed = 1f;
+    public Vector3 hidepos;
+    public Vector3 showpos;
+    private bool manualShown = false;
+    private int currentPage = 0;
+    private int maxPages = 1;
+
+    private Vector3 hoverPos;
+    private Vector3 originalPos;
+
+    public void Start()
+    {
+        foreach (Transform child in pagesParent.transform)
+        {
+            pages.Add(child.gameObject);
+        }
+        maxPages = pagesParent.transform.childCount;
+        hoverPos = new Vector3(manual.transform.position.x, manual.transform.position.y, manual.transform.position.z - 0.02f);
+        originalPos = manual.transform.position;
+        hidepos = manual.transform.position;
+    }
+
+    public void ShowManual()
+    {
+        Debug.Log("ManualHandler ShowManual");
+        targetPos = showpos;
+        updatePos = true;
+        manualShown = true;
+        hideManualCollider.ToggleHideManual();
+    }
+
+
+    public void HideManual()
+    {
+        Debug.Log("ManualHandler HideManual");
+        targetPos = hidepos;
+        updatePos = true;
+        manualShown = false;
+    }
+
+
+    public void NextPage()
+    {
+        currentPage = currentPage + 1 < maxPages ? currentPage + 1 : currentPage;
+        var pageToTurn = pages[currentPage];
+        pageToTurn.transform.rotation = new Quaternion(0, 0, 180, 0);
+        pageToTurn.transform.rotation = new Quaternion(0,0,0,0);
+    }
+
+    public void PreviousPage()
+    {
+        currentPage = currentPage - 1 > 0 ? currentPage - 1 : 0;
+        var pageToTurn = pages[currentPage];
+        pageToTurn.transform.rotation = new Quaternion(0, 0, 0, 0);
+    }
+
+    private void Update()
+    {
+        if (updatePos && targetPos != Vector3.negativeInfinity)
+        {
+            if (Vector3.Distance(manual.transform.position, targetPos) > minDistance)
+            {
+                manual.transform.localPosition = Vector3.MoveTowards(manual.transform.localPosition, targetPos, speed * Time.deltaTime);
+            } else
+            {
+                updatePos = false;
+                targetPos = Vector3.negativeInfinity;
+            }
+        }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Debug.Log("ManualHandler OnPointerEnter");
+        if (!manualShown)
+        {
+            manual.transform.position = hoverPos;
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        Debug.Log("ManualHandler OnPointerExit");
+        if (!manualShown)
+        {
+            manual.transform.position = originalPos;
+        }
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        Debug.Log("ManualHandler OnPointerUp");
+        if (!manualShown)
+        {
+            ShowManual();
+        }
+    }
+}
