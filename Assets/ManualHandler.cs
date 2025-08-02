@@ -11,6 +11,9 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public GameObject hideposObj;
     public GameObject showposObj;
 
+    public PageTurner pageTurnerPrevious;
+    public PageTurner pageTurnerNext;
+
     public List<GameObject> pages;
 
     private Vector3 targetPos = Vector3.negativeInfinity;
@@ -25,6 +28,11 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     private Vector3 hoverPos;
     private Vector3 originalPos;
+
+    private GameObject rotatePageTarget = null;
+    private bool rotating = false;
+    private int rotationDir = 0;
+    private float rotationSpeed = 1.5f;
 
     public void Start()
     {
@@ -47,6 +55,8 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         //manualShown = true;
         hideManualCollider.ToggleHideManual();
         GetComponent<BoxCollider>().enabled = false;
+        pageTurnerPrevious.setEnabled(true);
+        pageTurnerNext.setEnabled(true);
     }
 
 
@@ -57,22 +67,40 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         updatePos = true;
         //manualShown = false;
         GetComponent<BoxCollider>().enabled = true;
+        pageTurnerPrevious.setEnabled(false);
+        pageTurnerNext.setEnabled(false);
     }
 
 
     public void NextPage()
     {
-        currentPage = currentPage + 1 < maxPages ? currentPage + 1 : currentPage;
+        Debug.Log("start NextPage currentPage" + currentPage);
         var pageToTurn = pages[currentPage];
-        pageToTurn.transform.rotation = new Quaternion(0, 0, 180, 0);
-        pageToTurn.transform.rotation = new Quaternion(0,0,0,0);
+        rotatePageTarget = pageToTurn;
+        rotating = true;
+        rotationDir = 1;
+
+        //pageToTurn.transform.rotation = new Quaternion(0, 0, 180, 0);
+        //pageToTurn.transform.rotation = new Quaternion(0,0,0,0);
+
+        currentPage = currentPage + 1 < maxPages ? currentPage + 1 : currentPage;
+
+        Debug.Log("NextPage currentPage" + currentPage);
     }
 
     public void PreviousPage()
     {
-        currentPage = currentPage - 1 > 0 ? currentPage - 1 : 0;
+        Debug.Log("start PreviousPage currentPage" + currentPage);
         var pageToTurn = pages[currentPage];
-        pageToTurn.transform.rotation = new Quaternion(0, 0, 0, 0);
+        //pageToTurn.transform.rotation = new Quaternion(0, 0, 0, 0);
+
+        currentPage = currentPage - 1 > 0 ? currentPage - 1 : 0;
+
+        rotatePageTarget = pageToTurn;
+        rotating = true;
+        rotationDir = -1;
+
+        Debug.Log("PreviousPage currentPage" + currentPage);
     }
 
     private void Update()
@@ -87,6 +115,50 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
                 updatePos = false;
                 targetPos = Vector3.negativeInfinity;
                 manualShown = !manualShown;
+            }
+        }
+
+        if (rotating && rotatePageTarget != null)
+        {
+            if (rotationDir == -1)
+            {
+                var newZ = Mathf.Lerp(
+                    rotatePageTarget.transform.rotation.z,
+                    0,
+                    rotationSpeed * Time.deltaTime);
+
+                var rot = rotatePageTarget.transform.eulerAngles;
+                rot.z = newZ;
+                //rotatePageTarget.transform.rotation = rot;
+                rotatePageTarget.transform.eulerAngles = rot;
+
+
+                //if (rotatePageTarget.transform.rotation.z <= 0.01f)
+                //{
+                //    rotating = false;
+                //    rotatePageTarget = null;
+                //    rotationDir = 0;
+                //}
+            }
+            else if (rotationDir == 1)
+            {
+
+                var newZ = Mathf.Lerp(
+                    rotatePageTarget.transform.rotation.z,
+                    180,
+                    rotationSpeed * Time.deltaTime);
+
+                var rot = rotatePageTarget.transform.eulerAngles;
+                rot.z = newZ;
+                //rotatePageTarget.transform.rotation = rot;
+                rotatePageTarget.transform.eulerAngles = rot;
+
+                //if (rotatePageTarget.transform.rotation.z <= 179.99f)
+                //{
+                //    rotating = false;
+                //    rotatePageTarget = null;
+                //    rotationDir = 0;
+                //}
             }
         }
     }

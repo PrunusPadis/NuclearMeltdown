@@ -1,5 +1,87 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2488281709351476854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5722290175514525305}
+  - component: {fileID: 4967929834484298587}
+  - component: {fileID: 1624181544229098596}
+  m_Layer: 0
+  m_Name: pageTurnerNext
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5722290175514525305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2488281709351476854}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.243}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5579848662897591870}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4967929834484298587
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2488281709351476854}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.19224544, y: 0.03562674, z: 0.2778507}
+  m_Center: {x: -0.101075076, y: -0.006559741, z: 0.24444053}
+--- !u!114 &1624181544229098596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2488281709351476854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082f19c62d6b0458d8bab6f59677e3af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 205340216915839016}
+        m_TargetAssemblyTypeName: ManualHandler, Assembly-CSharp
+        m_MethodName: NextPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  active: 0
 --- !u!1 &2860168443906466084
 GameObject:
   m_ObjectHideFlags: 0
@@ -54,9 +136,12 @@ MonoBehaviour:
   hideManualCollider: {fileID: 3926949296523330843}
   hideposObj: {fileID: 8501178409135044246}
   showposObj: {fileID: 7667564752673395136}
+  pageTurnerPrevious: {fileID: 979181337804993081}
+  pageTurnerNext: {fileID: 1624181544229098596}
   pages: []
   hidepos: {x: 0, y: 0, z: 0}
   showpos: {x: 0, y: 0.1, z: 0}
+  manualShown: 0
 --- !u!65 &1272519033849997093
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78,6 +163,88 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.401409, y: 0.068320125, z: 0.2868563}
   m_Center: {x: -0.0020545572, y: 0.017980086, z: 0.24464029}
+--- !u!1 &4269277194158776617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7593283441360238154}
+  - component: {fileID: 6809022620037409008}
+  - component: {fileID: 979181337804993081}
+  m_Layer: 0
+  m_Name: pageTurnerPrevious
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7593283441360238154
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4269277194158776617}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.451, y: 0, z: -0.243}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5579848662897591870}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6809022620037409008
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4269277194158776617}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.19542049, y: 0.03562674, z: 0.27750063}
+  m_Center: {x: -0.34602594, y: -0.006559716, z: 0.24426526}
+--- !u!114 &979181337804993081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4269277194158776617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082f19c62d6b0458d8bab6f59677e3af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 205340216915839016}
+        m_TargetAssemblyTypeName: ManualHandler, Assembly-CSharp
+        m_MethodName: PreviousPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  active: 0
 --- !u!1 &7667564752673395136
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4337550884389417465
 Transform:
   m_ObjectHideFlags: 0
@@ -190,7 +357,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.2997453, y: 0.43923938, z: 1}
   m_Center: {x: -0.14987269, y: -0.28037986, z: -0.0000000059508327}
@@ -276,7 +443,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1180236720978772415, guid: 31d36c91bfc514c4aa0c0d06d84e4103, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 7593283441360238154}
+    - targetCorrespondingSourceObject: {fileID: 1180236720978772415, guid: 31d36c91bfc514c4aa0c0d06d84e4103, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 5722290175514525305}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31d36c91bfc514c4aa0c0d06d84e4103, type: 3}
 --- !u!1 &5046485656002460443 stripped
