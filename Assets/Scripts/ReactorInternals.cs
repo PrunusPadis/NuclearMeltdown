@@ -110,6 +110,7 @@ public class ReactorInternals : MonoSingleton<ReactorInternals>
         else
         {
             temperature = powerLevel  * temperatureModifier; //aka meltdow etc
+            cramActivated = true;
             ScenarioManager.Instance.CramActivated();
         }
 

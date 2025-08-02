@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MoveCameraToTarget : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class MoveCameraToTarget : MonoBehaviour
     public bool active = true;
 
     public float moveSpeed = 1f;
-
+    public UnityEvent OnCameraEnd = new();
     void Update()
     {
         if (!active)
@@ -23,6 +24,7 @@ public class MoveCameraToTarget : MonoBehaviour
                 moveSpeed * Time.deltaTime);
         } else
         {
+            OnCameraEnd.Invoke();
             active = false;
         }
     }

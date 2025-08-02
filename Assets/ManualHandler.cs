@@ -25,7 +25,7 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public bool manualShown = false;
     private int currentPage = 0;
     private int maxPages = 1;
-
+    public Vector3 hoverOffset;
     private Vector3 hoverPos;
     private Vector3 originalPos;
 
@@ -43,7 +43,7 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             pages.Add(child.gameObject);
         }
         maxPages = pagesParent.transform.childCount;
-        hoverPos = new Vector3(manual.transform.position.x, manual.transform.position.y, manual.transform.position.z - 0.02f);
+        hoverPos = manual.transform.position + hoverOffset;
         originalPos = manual.transform.position;
         hidepos = hideposObj.transform.position;
         showpos = showposObj.transform.position;
@@ -72,8 +72,8 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         GetComponent<BoxCollider>().enabled = true;
         pageTurnerPrevious.setEnabled(false);
         pageTurnerNext.setEnabled(false);
-
-        foreach(var page in pages)
+        currentPage = 0;
+        foreach (var page in pages)
         {
             //page.transform.eulerAngles = new Vector3(0,0,0);
 

@@ -99,7 +99,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1239066091811357485
 Transform:
   m_ObjectHideFlags: 0
@@ -140,8 +140,9 @@ MonoBehaviour:
   pageTurnerNext: {fileID: 1624181544229098596}
   pages: []
   hidepos: {x: 0, y: 0, z: 0}
-  showpos: {x: 0, y: 0.1, z: 0}
+  showpos: {x: 0, y: 0, z: 0}
   manualShown: 0
+  hoverOffset: {x: 0, y: 0.05, z: 0}
   audioclip: {fileID: 8300000, guid: 833c026499b311f499bb1ff23d76196f, type: 3}
 --- !u!65 &1272519033849997093
 BoxCollider:
@@ -438,9 +439,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1934443817737943419, guid: 31d36c91bfc514c4aa0c0d06d84e4103, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.001
+      objectReference: {fileID: 0}
     - target: {fileID: 1957618502420372229, guid: 31d36c91bfc514c4aa0c0d06d84e4103, type: 3}
       propertyPath: m_Name
       value: manual
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957618502420372229, guid: 31d36c91bfc514c4aa0c0d06d84e4103, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801750022911931724, guid: 31d36c91bfc514c4aa0c0d06d84e4103, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3070810042310885843, guid: 31d36c91bfc514c4aa0c0d06d84e4103, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168814664663940445, guid: 31d36c91bfc514c4aa0c0d06d84e4103, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593133604541161786, guid: 31d36c91bfc514c4aa0c0d06d84e4103, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021325711653601302, guid: 31d36c91bfc514c4aa0c0d06d84e4103, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058070683233544850, guid: 31d36c91bfc514c4aa0c0d06d84e4103, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0112
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058070683233544850, guid: 31d36c91bfc514c4aa0c0d06d84e4103, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
