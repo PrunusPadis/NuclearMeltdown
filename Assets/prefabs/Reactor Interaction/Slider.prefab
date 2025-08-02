@@ -56,6 +56,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 5361765705236279122}
     m_Modifications:
     - target: {fileID: 1096191668406463334, guid: 6fb1aa7c3410e4b75abaa2d2112be80d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096191668406463334, guid: 6fb1aa7c3410e4b75abaa2d2112be80d, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.064995185
       objectReference: {fileID: 0}
@@ -102,6 +106,10 @@ PrefabInstance:
     - target: {fileID: 4954590732824412061, guid: 6fb1aa7c3410e4b75abaa2d2112be80d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196563356829263086, guid: 6fb1aa7c3410e4b75abaa2d2112be80d, type: 3}
+      propertyPath: audioTreshold
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8196563356829263086, guid: 6fb1aa7c3410e4b75abaa2d2112be80d, type: 3}
       propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target

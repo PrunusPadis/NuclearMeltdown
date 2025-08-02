@@ -16,6 +16,9 @@ public class ReactorInternals : MonoSingleton<ReactorInternals>
     
     public float temperature;
 
+    public float maxTemp;
+    public float controlTemp;
+
     [Header("Rods")]
 
     public float controlRodModifier = 10;
@@ -23,7 +26,7 @@ public class ReactorInternals : MonoSingleton<ReactorInternals>
     public List<float> controlRods;
     public List<float> automaticRods;
 
-
+    public float automaticRodSpeed = 1;
     [Header("Pumps")]
 
     public float temperatureModifier = 10;
@@ -72,6 +75,11 @@ public class ReactorInternals : MonoSingleton<ReactorInternals>
 
     private void Update()
     {
+        if (ScenarioManager.Instance.GameOver)
+        {
+            this.enabled = false;
+        }
+
         float newPower = 0;
         foreach (var controlRod in controlRods)
         {
@@ -79,8 +87,11 @@ public class ReactorInternals : MonoSingleton<ReactorInternals>
         }
         foreach (var controlRod in automaticRods)
         {
-            newPower += Mathf.Pow(controlRod * controlRodModifier, 2);
+            //newPower += Mathf.Pow(controlRod * controlRodModifier, 2);
+            
         }
+        
+
         powerLevel = newPower;
 
         //water
@@ -99,6 +110,7 @@ public class ReactorInternals : MonoSingleton<ReactorInternals>
         else
         {
             temperature = powerLevel  * temperatureModifier; //aka meltdow etc
+            ScenarioManager.Instance.CramActivated();
         }
 
         //steam

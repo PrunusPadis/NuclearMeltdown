@@ -95,6 +95,10 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: 7817417c864bc7842bf87bef05b82104, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 2f010beb83a2db94b92bbb0669f89035, type: 2}
   meshRenderer: {fileID: 3590470911919430807}
+  audioClip: {fileID: 8300000, guid: 07db8535099010d4daaa9ea5abf1bc36, type: 3}
+  audioInterval: 0.1
+  audioTreshold: 0.1
+  volume: 0.8
   minRotation: -60
   maxRotation: 270
 --- !u!1 &3540686421495533465

@@ -15,6 +15,9 @@ public class PhysicalSlider : ComplexSwitch, IPointerEnterHandler, IPointerExitH
     public Transform maxPosAnchor;
     public Transform minPosAnchor;
 
+    
+
+
     protected override void UpdateSlider()
     {
         normalizedValue = value / (maxValue - minValue);
@@ -27,15 +30,4 @@ public class PhysicalSlider : ComplexSwitch, IPointerEnterHandler, IPointerExitH
 
 
 
-    public virtual void OnPointerEnter(PointerEventData eventData)
-    {
-        Debug.Log("PhysicalSlider OnPointerEnter");
-        PointerEntered.Invoke();
-    }
-
-    public virtual void OnPointerExit(PointerEventData eventData)
-    {
-        Debug.Log("PhysicalSlider OnPointerExit");
-        PointerExited.Invoke();
-    }
 }

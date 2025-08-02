@@ -167,7 +167,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ReactorSwitch, Assembly-CSharp
-        m_MethodName: ApplyChange
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -184,6 +184,16 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: 7817417c864bc7842bf87bef05b82104, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 2f010beb83a2db94b92bbb0669f89035, type: 2}
   meshRenderer: {fileID: 6141568253533249945}
+  audioClip: {fileID: 8300000, guid: 2ee8b98aa1106e843826d6d701c42482, type: 3}
+  audioInterval: 0.1
+  audioTreshold: 1
+  volume: 0.7
+  PointerEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  PointerExited:
+    m_PersistentCalls:
+      m_Calls: []
   maxPosAnchor: {fileID: 5103595789401165860}
   minPosAnchor: {fileID: 2067718966769513187}
 --- !u!1 &3855735787718882368

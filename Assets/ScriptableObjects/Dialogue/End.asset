@@ -13,9 +13,15 @@ MonoBehaviour:
   m_Name: End
   m_EditorClassIdentifier: 
   parts:
-  - text: 
-    clip: {fileID: 8300000, guid: af1fd36e986d5d94a9ad3bf28fe8f5cf, type: 3}
-    duration: 5
   - text: 'Good job, now the reactor is completely unusable '
     clip: {fileID: 8300000, guid: 30cebd59713e84abd9cfb746ace87e2b, type: 3}
     duration: 4
+    effect: {fileID: 0}
+  - text: 
+    clip: {fileID: 8300000, guid: 3b26d5dbc598d914cb83ef959ab32cc7, type: 3}
+    duration: 5
+    effect: {fileID: 11400000, guid: 90b71e46beb1f6d44bad5d998f2139c8, type: 2}
+  - text: 'Good job, now the reactor is completely unusable '
+    clip: {fileID: 8300000, guid: 30cebd59713e84abd9cfb746ace87e2b, type: 3}
+    duration: 4
+    effect: {fileID: 0}

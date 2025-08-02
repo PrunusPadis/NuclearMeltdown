@@ -20,12 +20,19 @@ public class ComplexSwitch : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     protected bool activated;
     protected float normalizedValue;
     protected float achorValue; //set when clicked
+    protected float lastFrameValue;
 
     public Material defaultMaterial;
     public Material highlightMaterial;
 
     public MeshRenderer meshRenderer;
 
+    [Header("Audio")]
+    public AudioClip audioClip;
+    public float audioInterval;
+    public float audioTreshold = 1;
+    public float volume = 1;
+    protected float intervalValue;
     public virtual void OnPointerDown(PointerEventData eventData)
     {
 
@@ -60,18 +67,25 @@ public class ComplexSwitch : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (activated)
         {
+            intervalValue -= Time.deltaTime;
             var delta = Mouse.current.position.ReadValue() - screenCursorPos;
             float valueDelta = UpdateValue(delta);
+            
             value = achorValue + valueDelta;
             if (value > maxValue) value = maxValue;
             if (value < minValue) value = minValue;
             if(valueDelta != 0)
             {
                 OnValueChanged.Invoke(value);
+                if(intervalValue < 0 && Mathf.Abs(value- lastFrameValue) > audioTreshold)
+                {
+                    intervalValue = audioInterval;
+                    AudioPlayer.PlayClipAtPoint(this, audioClip, transform.position, volume);
+                }
             }
             
             UpdateSlider();
-
+            lastFrameValue = value;
         }
     }
 
