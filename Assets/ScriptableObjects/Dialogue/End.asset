@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d47ee17a2054c469debb87dacf0ea1, type: 3}
   m_Name: End
   m_EditorClassIdentifier: 
-  text: Good job, now the reactor is completely unusable
-  clip: {fileID: 0}
+  parts:
+  - text: 
+    clip: {fileID: 8300000, guid: af1fd36e986d5d94a9ad3bf28fe8f5cf, type: 3}
+    duration: 5
+  - text: 'Good job, now the reactor is completely unusable '
+    clip: {fileID: 8300000, guid: 30cebd59713e84abd9cfb746ace87e2b, type: 3}
+    duration: 4

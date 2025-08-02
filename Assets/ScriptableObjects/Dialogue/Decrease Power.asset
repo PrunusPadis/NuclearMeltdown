@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d47ee17a2054c469debb87dacf0ea1, type: 3}
   m_Name: Decrease Power
   m_EditorClassIdentifier: 
-  text: First you need to lower the reactor output to 100MW
-  clip: {fileID: 0}
+  parts:
+  - text: 'First you need to lower the reactor output to 100MW '
+    clip: {fileID: 8300000, guid: 4b5477168804f4ff6855a767598dc0f0, type: 3}
+    duration: 5
