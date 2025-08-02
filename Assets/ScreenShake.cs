@@ -14,6 +14,7 @@ public class ScreenShake : MonoBehaviour
 
     public void Shake(float duration, float magnitude)
     {
+        originalPosition = transform.localPosition; // this works if you dont spam this shake...
         StartCoroutine(ShakeCoroutine(duration, magnitude));
     }
 
