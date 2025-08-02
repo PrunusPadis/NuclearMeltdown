@@ -86,7 +86,7 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void NextPage()
     {
-        if (currentPage > 0)
+        if (currentPage > 0 && currentPage != maxPages)
         {
             pages[currentPage - 1].SetActive(false);
         }
