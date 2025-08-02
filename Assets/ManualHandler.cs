@@ -19,7 +19,7 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private float speed = 1f;
     public Vector3 hidepos;
     public Vector3 showpos;
-    private bool manualShown = false;
+    public bool manualShown = false;
     private int currentPage = 0;
     private int maxPages = 1;
 
@@ -46,6 +46,7 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         updatePos = true;
         manualShown = true;
         hideManualCollider.ToggleHideManual();
+        GetComponent<BoxCollider>().enabled = false;
     }
 
 
@@ -55,6 +56,7 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         targetPos = hidepos;
         updatePos = true;
         manualShown = false;
+        GetComponent<BoxCollider>().enabled = true;
     }
 
 
@@ -79,7 +81,7 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         {
             if (Vector3.Distance(manual.transform.position, targetPos) > minDistance)
             {
-                manual.transform.localPosition = Vector3.MoveTowards(manual.transform.localPosition, targetPos, speed * Time.deltaTime);
+                manual.transform.position = Vector3.MoveTowards(manual.transform.position, targetPos, speed * Time.deltaTime);
             } else
             {
                 updatePos = false;
