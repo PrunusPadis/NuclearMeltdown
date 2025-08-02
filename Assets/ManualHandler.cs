@@ -44,7 +44,7 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         Debug.Log("ManualHandler ShowManual");
         targetPos = showpos;
         updatePos = true;
-        manualShown = true;
+        //manualShown = true;
         hideManualCollider.ToggleHideManual();
         GetComponent<BoxCollider>().enabled = false;
     }
@@ -55,7 +55,7 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         Debug.Log("ManualHandler HideManual");
         targetPos = hidepos;
         updatePos = true;
-        manualShown = false;
+        //manualShown = false;
         GetComponent<BoxCollider>().enabled = true;
     }
 
@@ -86,6 +86,7 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             {
                 updatePos = false;
                 targetPos = Vector3.negativeInfinity;
+                manualShown = !manualShown;
             }
         }
     }

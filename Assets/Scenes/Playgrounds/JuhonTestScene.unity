@@ -450,6 +450,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ManualHandler
       objectReference: {fileID: 0}
+    - target: {fileID: 6536406843713756468, guid: 1bd9517e6eaa34f0cb1024b526785030, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907348115571867107, guid: 1bd9517e6eaa34f0cb1024b526785030, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
