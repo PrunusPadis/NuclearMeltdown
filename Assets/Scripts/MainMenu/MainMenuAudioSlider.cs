@@ -22,6 +22,8 @@ public class MainMenuAudioSlider : MonoBehaviour
 
     private void Start()
     {
+        _mainMixer = audioMixerGroup.audioMixer;
+
         //InitializeAudioSettings();
         foreach (var param in _mainMixer.FindMatchingGroups(string.Empty))
         {
