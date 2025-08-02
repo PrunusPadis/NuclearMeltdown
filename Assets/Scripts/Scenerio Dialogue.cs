@@ -13,5 +13,7 @@ public class ScenerioDialogue : ScriptableObject
         public AudioClip clip;
 
         public float duration;
+
+        public ScenarioEffect effect;
     }
 }

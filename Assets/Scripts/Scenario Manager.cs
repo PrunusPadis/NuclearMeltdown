@@ -1,23 +1,28 @@
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static ScenerioDialogue;
-public class ScenarioManager : MonoBehaviour
+public class ScenarioManager : MonoSingleton<ScenarioManager>
 {
     [Serializable]
     public class ScenarioLevel
     {
         public ScenarioRequirment requirment;
         public ScenerioDialogue dialogue;
-
     }
+
+    public AudioClip BoomClip;
+    public AudioClip CramClip;
 
     public ReactorInternals reactor;
 
     public List<ScenarioLevel> scenario = new();
 
-
+    public bool GameOver;
+    public float resetTime = 5;
     [SerializeField] int levelIndex = 0;
     int dialoguePart = 0;
     ScenarioLevel currentLevel;
@@ -26,7 +31,7 @@ public class ScenarioManager : MonoBehaviour
 
     private void Start()
     {
-        
+        GameOver = false;
         reactor = ReactorInternals.Instance;
         currentLevel = scenario[levelIndex]; //for easy testing
         timeLeft = currentLevel.dialogue.parts[dialoguePart].duration;
@@ -36,7 +41,16 @@ public class ScenarioManager : MonoBehaviour
     private void Update()
     {
         timeLeft -= Time.deltaTime;
-     
+        if (GameOver)
+        {
+            resetTime -= Time.deltaTime;
+            if (resetTime < 0)
+            {
+                SceneManager.LoadScene("MainMenu");
+            }
+
+        }
+
         if (timeLeft < 0)
         {
             if (!IsLastPart(currentLevel))
@@ -77,9 +91,15 @@ public class ScenarioManager : MonoBehaviour
         }
     }
 
+    public void CramActivated()
+    {
+        AudioPlayer.PlayClipAtPoint(this, CramClip, transform.position);
+        GameOver = true;
+    }
+
     private void GameEnd()
     {
-        throw new NotImplementedException();
+        GameOver = true;
     }
 
     private bool IsComplited(ScenarioRequirment requirment)
@@ -95,5 +115,9 @@ public class ScenarioManager : MonoBehaviour
         timeLeft = part.duration;
         SubtitleManager.Instance.PlaySubtitles(part.text);
         AudioPlayer.PlayClipAtPoint(this, part.clip, transform.position);
+        if(part.effect != null)
+        {
+            part.effect.TriggerEffect();
+        }
     }
 }
