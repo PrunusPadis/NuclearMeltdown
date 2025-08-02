@@ -15,10 +15,10 @@ MonoBehaviour:
   active: 1
   type:
     m_OverrideState: 1
-    m_Value: 8
+    m_Value: 9
   intensity:
     m_OverrideState: 1
-    m_Value: 0.497
+    m_Value: 0.7
   response:
     m_OverrideState: 1
     m_Value: 0.8
