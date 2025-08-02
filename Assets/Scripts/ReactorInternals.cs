@@ -111,7 +111,7 @@ public class ReactorInternals : MonoSingleton<ReactorInternals>
         waterPressure = waterTemperature * waterPressureMod;
         waterFlow = waterPressure * waterFlowMod;
 
-        condenseTemperature = condenseFlow * condenseWarmingMod;
+        condenseTemperature = condenseFlow * condenseWarmingMod; //TODO WARMING
         condenseFlow = condensePump;
         condensePressure = condenseTemperature * condenseFlow;
 

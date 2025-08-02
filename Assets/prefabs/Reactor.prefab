@@ -46,11 +46,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerLevel: 1000
   temperature: 250
+  controlRodModifier: 4
   controlRods:
   - 10
   - 10
   - 10
   - 10
-  pumpPower: 100
-  controlRodModifier: 4
+  automaticRods:
+  - 10
+  - 10
   temperatureModifier: 15
+  circulationPumps:
+  - 100
+  - 100
+  condensePump: 10
+  emergencyPump: 0
+  steamPressure: 0
+  steamFlow: 0
+  waterPressure: 0
+  waterFlow: 0
+  condenseFlow: 0
+  condensePressure: 0
+  waterTemperature: 0
+  steamTemperature: 0
+  condenseTemperature: 0
+  totalPumpPower: 0
+  steamMod: 1
+  condenseMod: 70
+  condenseWarmingMod: 1
+  waterPressureMod: 1
+  waterFlowMod: 1
+  steamPressureMod: 0.2
+  steamFlowMod: 1
+  steamTempMod: 1
+  cramActivated: 0
+  cramEnabled: 0

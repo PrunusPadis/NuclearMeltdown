@@ -21,6 +21,11 @@ public class ComplexSwitch : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     protected float normalizedValue;
     protected float achorValue; //set when clicked
 
+    public Material defaultMaterial;
+    public Material highlightMaterial;
+
+    public MeshRenderer meshRenderer;
+
     public virtual void OnPointerDown(PointerEventData eventData)
     {
 
@@ -34,13 +39,14 @@ public class ComplexSwitch : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public virtual void OnPointerEnter(PointerEventData eventData)
     {
-
+        meshRenderer.material = highlightMaterial; 
         transform.localScale = Vector3.one * 1.1f; //TODO feedback
     }
 
     public virtual void OnPointerExit(PointerEventData eventData)
     {
         transform.localScale = Vector3.one; //TODO feedback
+        meshRenderer.material = defaultMaterial;
     }
 
     public virtual void OnPointerUp(PointerEventData eventData)
