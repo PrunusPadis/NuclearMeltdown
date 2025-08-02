@@ -192,9 +192,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8023849810884707054}
     m_Modifications:
+    - target: {fileID: 4853207080953767894, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4853207080953767894, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 4963503538697803549, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
       propertyPath: m_Name
       value: Water Temp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696425185411952946, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696425185411952946, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6223054664055554657, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
       propertyPath: m_Name
@@ -340,6 +356,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water Pressure
       objectReference: {fileID: 0}
+    - target: {fileID: 3130409083373171661, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 3130409083373171661, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 5942820848634437904, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7431448
@@ -546,6 +570,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Condense Pressure
       objectReference: {fileID: 0}
+    - target: {fileID: 3130409083373171661, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 3130409083373171661, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 7318547543194016910, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
       propertyPath: meterType
       value: 15
@@ -788,6 +820,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8023849810884707054}
     m_Modifications:
+    - target: {fileID: 4853207080953767894, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4853207080953767894, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 4963503538697803549, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
       propertyPath: m_Name
       value: Condense Temp
@@ -870,42 +910,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8023849810884707054}
     m_Modifications:
-    - target: {fileID: 1992039693727270994, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7431448
-      objectReference: {fileID: 0}
-    - target: {fileID: 1992039693727270994, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.6691306
-      objectReference: {fileID: 0}
     - target: {fileID: 2012429976844762249, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
       propertyPath: m_Name
       value: Steam Pressure
       objectReference: {fileID: 0}
-    - target: {fileID: 5942820848634437904, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7431448
-      objectReference: {fileID: 0}
-    - target: {fileID: 5942820848634437904, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.6691306
-      objectReference: {fileID: 0}
-    - target: {fileID: 5942820848634437904, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5942820848634437904, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5942820848634437904, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7318547543194016910, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
-      propertyPath: meterType
-      value: 12
-      objectReference: {fileID: 0}
+    - target: {fileID: 3130409083373171661, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 3130409083373171661, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 7744528240719245624, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6004
@@ -946,10 +962,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8599105861249686522, guid: 51467f8336e033d4ba3d9fe721a76cee, type: 3}
-      propertyPath: meterType
-      value: 11
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -976,6 +988,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.6676708
       objectReference: {fileID: 0}
+    - target: {fileID: 4853207080953767894, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4853207080953767894, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 4963503538697803549, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
       propertyPath: m_Name
       value: Condense Pump
@@ -1134,7 +1154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3380179283471934934, guid: f7a87dd7eb75a7d4c9e4507feae9ec18, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000005900821
+      value: -5.964334e-10
       objectReference: {fileID: 0}
     - target: {fileID: 3380179283471934934, guid: f7a87dd7eb75a7d4c9e4507feae9ec18, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1516,7 +1536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3380179283471934934, guid: f7a87dd7eb75a7d4c9e4507feae9ec18, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000005900821
+      value: -5.964334e-10
       objectReference: {fileID: 0}
     - target: {fileID: 3380179283471934934, guid: f7a87dd7eb75a7d4c9e4507feae9ec18, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1618,7 +1638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3380179283471934934, guid: f7a87dd7eb75a7d4c9e4507feae9ec18, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000005900821
+      value: -5.964334e-10
       objectReference: {fileID: 0}
     - target: {fileID: 3380179283471934934, guid: f7a87dd7eb75a7d4c9e4507feae9ec18, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1710,6 +1730,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8023849810884707054}
     m_Modifications:
+    - target: {fileID: 4853207080953767894, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4853207080953767894, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 4963503538697803549, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
       propertyPath: m_Name
       value: Steam Temp
@@ -1721,6 +1749,11 @@ PrefabInstance:
     - target: {fileID: 6376644230603406484, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
       propertyPath: meterType
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341709638177976117, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_text
+      value: "\u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430
+        \u043F\u0430\u0440\u0430"
       objectReference: {fileID: 0}
     - target: {fileID: 8771580873304048952, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
       propertyPath: m_LocalScale.x
@@ -1978,6 +2011,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8023849810884707054}
     m_Modifications:
+    - target: {fileID: 4853207080953767894, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4853207080953767894, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 4963503538697803549, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
       propertyPath: m_Name
       value: Emergency Pump
@@ -2160,31 +2201,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: bb216a2986cbe0443841198401d292ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0.010480178
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb216a2986cbe0443841198401d292ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb216a2986cbe0443841198401d292ff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.003917966
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb216a2986cbe0443841198401d292ff, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: bb216a2986cbe0443841198401d292ff, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.00000003774895
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: bb216a2986cbe0443841198401d292ff, type: 3}
-      propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb216a2986cbe0443841198401d292ff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bb216a2986cbe0443841198401d292ff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bb216a2986cbe0443841198401d292ff, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb216a2986cbe0443841198401d292ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2192,7 +2233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb216a2986cbe0443841198401d292ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb216a2986cbe0443841198401d292ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -2415,7 +2456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3380179283471934934, guid: f7a87dd7eb75a7d4c9e4507feae9ec18, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000005900821
+      value: -5.964334e-10
       objectReference: {fileID: 0}
     - target: {fileID: 3380179283471934934, guid: f7a87dd7eb75a7d4c9e4507feae9ec18, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2507,6 +2548,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8023849810884707054}
     m_Modifications:
+    - target: {fileID: 4853207080953767894, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4853207080953767894, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 4963503538697803549, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
       propertyPath: m_Name
       value: Circulation Pump 2
@@ -2589,6 +2638,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8023849810884707054}
     m_Modifications:
+    - target: {fileID: 4853207080953767894, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4853207080953767894, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 4963503538697803549, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
       propertyPath: m_Name
       value: Circulation Pump 1
