@@ -19,6 +19,15 @@ public class MainMenuAudioSlider : MonoBehaviour
 
     public Transform target;
 
+    private void Start()
+    {
+        InitializeAudioSettings();
+    }
+
+    public void InitializeAudioSettings()
+    {
+        _mainMixer = Resources.Load<AudioMixer>("NewAudioMixer");
+    }
 
     public virtual void UpdateAudioValue()
     {
