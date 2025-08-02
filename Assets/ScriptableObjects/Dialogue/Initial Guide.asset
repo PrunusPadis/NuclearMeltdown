@@ -12,7 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d47ee17a2054c469debb87dacf0ea1, type: 3}
   m_Name: Initial Guide
   m_EditorClassIdentifier: 
-  text: gent X you are tasked to shutdown the reactor, I will be giving you the basic
-    instructions through the radio for each step. There should be a manual for the
-    reactor nearby incase you encounter things not covered in your training
-  clip: {fileID: 0}
+  parts:
+  - text: 
+    clip: {fileID: 0}
+    duration: 1
+  - text: "Agent X you\u2019re tasked to shutdown the reactor, I\u2019ll be giving
+      you the basic instructions through the radio for each step.  "
+    clip: {fileID: 8300000, guid: 96700c59fa3f14edd83510f6ba524b5d, type: 3}
+    duration: 8
+  - text: 'There should be a manual for the reactor nearby in case you encounter
+      things not covered in your training '
+    clip: {fileID: 8300000, guid: d5cd09e6ab3e3426a87dd1f99e0ae820, type: 3}
+    duration: 7

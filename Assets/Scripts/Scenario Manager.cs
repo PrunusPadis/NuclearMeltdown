@@ -2,7 +2,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-
+using static ScenerioDialogue;
 public class ScenarioManager : MonoBehaviour
 {
     [Serializable]
@@ -19,27 +19,44 @@ public class ScenarioManager : MonoBehaviour
 
 
     [SerializeField] int levelIndex = 0;
+    int dialoguePart = 0;
     ScenarioLevel currentLevel;
     float timeLeft;
 
 
     private void Start()
     {
+        
         reactor = ReactorInternals.Instance;
         currentLevel = scenario[levelIndex]; //for easy testing
-        timeLeft = currentLevel.dialogue.duration;
+        timeLeft = currentLevel.dialogue.parts[dialoguePart].duration;
 
     }
 
     private void Update()
     {
         timeLeft -= Time.deltaTime;
+     
         if (timeLeft < 0)
         {
-            CheckScenarioRequirments();
+            if (!IsLastPart(currentLevel))
+            {
+                dialoguePart++;
+                PlayScenarioDialogue(currentLevel);
+            }
+            else
+            {
+                CheckScenarioRequirments();
+            }
+           
         }
         
 
+    }
+
+    private bool IsLastPart(ScenarioLevel level)
+    {
+        return dialoguePart >= level.dialogue.parts.Count - 1;
     }
 
     private void CheckScenarioRequirments()
@@ -48,7 +65,7 @@ public class ScenarioManager : MonoBehaviour
         {
             
             levelIndex++;
-           
+            dialoguePart = 0;
             if (levelIndex >= scenario.Count)
             {
                 GameEnd();
@@ -74,6 +91,9 @@ public class ScenarioManager : MonoBehaviour
 
     public void PlayScenarioDialogue(ScenarioLevel level)
     {
-        timeLeft = currentLevel.dialogue.duration;
+        var part = level.dialogue.parts[dialoguePart];
+        timeLeft = part.duration;
+        SubtitleManager.Instance.PlaySubtitles(part.text);
+        AudioPlayer.PlayClipAtPoint(this, part.clip, transform.position);
     }
 }
