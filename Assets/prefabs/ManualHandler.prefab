@@ -142,6 +142,7 @@ MonoBehaviour:
   hidepos: {x: 0, y: 0, z: 0}
   showpos: {x: 0, y: 0.1, z: 0}
   manualShown: 0
+  audioclip: {fileID: 8300000, guid: 833c026499b311f499bb1ff23d76196f, type: 3}
 --- !u!65 &1272519033849997093
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -34,6 +34,8 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private int rotationDir = 0;
     private float rotationSpeed = 0.01f;
 
+    public AudioClip audioclip;
+
     public void Start()
     {
         foreach (Transform child in pagesParent.transform)
@@ -70,6 +72,15 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         GetComponent<BoxCollider>().enabled = true;
         pageTurnerPrevious.setEnabled(false);
         pageTurnerNext.setEnabled(false);
+
+        foreach(var page in pages)
+        {
+            //page.transform.eulerAngles = new Vector3(0,0,0);
+
+            var rot = rotatePageTarget.transform.eulerAngles;
+            rot.z = 180;
+            page.transform.eulerAngles = rot;
+        }
     }
 
 
@@ -81,12 +92,15 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         rotationDir = 1;
         rotating = true;
 
-        //pageToTurn.transform.rotation = new Quaternion(0, 0, 180, 0);
-        //pageToTurn.transform.rotation = new Quaternion(0,0,0,0);
+        var rot = rotatePageTarget.transform.eulerAngles;
+        rot.z = 0 + currentPage;
+        rotatePageTarget.transform.eulerAngles = rot;
 
         currentPage = currentPage + 1 < maxPages ? currentPage + 1 : currentPage;
 
-        Debug.Log("NextPage currentPage " + currentPage);
+        AudioPlayer.PlayClipAtPoint(this, audioclip, transform.position, 1);
+        //Debug.Log("NextPage currentPage " + currentPage);
+        //Debug.Log("NextPage rotationDir " + rotationDir);
     }
 
     public void PreviousPage()
@@ -97,11 +111,13 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         //pageToTurn.transform.rotation = new Quaternion(0, 0, 0, 0);
 
 
-        rotatePageTarget = pageToTurn;
-        rotationDir = -1;
-        rotating = true;
+        var rot = rotatePageTarget.transform.eulerAngles;
+        rot.z = 180 + currentPage;
+        rotatePageTarget.transform.eulerAngles = rot;
 
-        Debug.Log("PreviousPage currentPage " + currentPage);
+        //Debug.Log("PreviousPage currentPage " + currentPage);
+        //Debug.Log("PreviousPage rotationDir " + rotationDir);
+        AudioPlayer.PlayClipAtPoint(this, audioclip, transform.position, 1);
     }
 
     private void Update()
@@ -119,49 +135,49 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             }
         }
 
-        if (rotating && rotatePageTarget != null)
-        {
-            if (rotationDir == -1)
-            {
-                var newZ = Mathf.Lerp(
-                    rotatePageTarget.transform.rotation.z,
-                    0,
-                    rotationSpeed * Time.deltaTime);
+        //if (rotating && rotatePageTarget != null)
+        //{
+        //    if (rotationDir == -1)
+        //    {
+        //        var newZ = Mathf.Lerp(
+        //            rotatePageTarget.transform.rotation.z,
+        //            0,
+        //            0.1f);
 
-                var rot = rotatePageTarget.transform.eulerAngles;
-                rot.z = newZ;
-                //rotatePageTarget.transform.rotation = rot;
-                rotatePageTarget.transform.eulerAngles = rot;
+        //        var rot = rotatePageTarget.transform.eulerAngles;
+        //        rot.z = newZ;
+        //        //rotatePageTarget.transform.rotation = rot;
+        //        rotatePageTarget.transform.eulerAngles = rot;
 
 
-                //if (rotatePageTarget.transform.rotation.z <= 0.01f)
-                //{
-                //    rotating = false;
-                //    rotatePageTarget = null;
-                //    rotationDir = 0;
-                //}
-            }
-            else if (rotationDir == 1)
-            {
+        //        if (rotatePageTarget.transform.rotation.z <= 0.01f)
+        //        {
+        //            rotating = false;
+        //            rotatePageTarget = null;
+        //            rotationDir = 0;
+        //        }
+        //    }
+        //    else if (rotationDir == 1)
+        //    {
 
-                var newZ = Mathf.Lerp(
-                    rotatePageTarget.transform.rotation.z,
-                    180,
-                    rotationSpeed * Time.deltaTime);
+        //        var newZ = Mathf.Lerp(
+        //            rotatePageTarget.transform.rotation.z,
+        //            180 - currentPage,
+        //            0.1f);
 
-                var rot = rotatePageTarget.transform.eulerAngles;
-                rot.z = newZ;
-                //rotatePageTarget.transform.rotation = rot;
-                rotatePageTarget.transform.eulerAngles = rot;
+        //        var rot = rotatePageTarget.transform.eulerAngles;
+        //        rot.z = newZ;
+        //        //rotatePageTarget.transform.rotation = rot;
+        //        rotatePageTarget.transform.eulerAngles = rot;
 
-                //if (rotatePageTarget.transform.rotation.z <= 179.99f)
-                //{
-                //    rotating = false;
-                //    rotatePageTarget = null;
-                //    rotationDir = 0;
-                //}
-            }
-        }
+        //        if (rotatePageTarget.transform.rotation.z <= 179.99f)
+        //        {
+        //            rotating = false;
+        //            rotatePageTarget = null;
+        //            rotationDir = 0;
+        //        }
+        //    }
+        //}
     }
 
     public void OnPointerEnter(PointerEventData eventData)
