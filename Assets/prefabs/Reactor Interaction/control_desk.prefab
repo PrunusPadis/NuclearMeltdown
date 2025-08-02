@@ -690,6 +690,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8023849810884707054}
     m_Modifications:
+    - target: {fileID: 2759569262440638536, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7431448
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759569262440638536, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.6691306
+      objectReference: {fileID: 0}
     - target: {fileID: 4963503538697803549, guid: cf7477a6b89df17439b96f70aa9f297f, type: 3}
       propertyPath: m_Name
       value: Condense Pump
