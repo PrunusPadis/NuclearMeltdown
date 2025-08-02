@@ -181,6 +181,9 @@ MonoBehaviour:
   minValue: 0
   value: 1.32
   sensitivity: 40
+  defaultMaterial: {fileID: 2100000, guid: 7817417c864bc7842bf87bef05b82104, type: 2}
+  highlightMaterial: {fileID: 2100000, guid: 2f010beb83a2db94b92bbb0669f89035, type: 2}
+  meshRenderer: {fileID: 6141568253533249945}
   maxPosAnchor: {fileID: 5103595789401165860}
   minPosAnchor: {fileID: 2067718966769513187}
 --- !u!1 &3855735787718882368
