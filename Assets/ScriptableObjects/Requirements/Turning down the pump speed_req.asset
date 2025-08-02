@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Turning down the pump speed_req
   m_EditorClassIdentifier: 
   requirmentType: 1
-  comparer: 0
+  comparer: 1
   value: 5

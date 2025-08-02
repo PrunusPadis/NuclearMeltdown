@@ -20,7 +20,7 @@ public class ScenarioRequirment : ScriptableObject
             case ReactorInternals.ReactorValueType.Power:
                 return Compare(reactor.powerLevel);
             case ReactorInternals.ReactorValueType.Pump:
-                return Compare(reactor.pumpPower);
+                return Compare(reactor.totalPumpPower);
             case ReactorInternals.ReactorValueType.Rods:
 
                 foreach (float f in reactor.controlRods)
@@ -31,7 +31,7 @@ public class ScenarioRequirment : ScriptableObject
                     }
                 }
                 return true;
-            case ReactorInternals.ReactorValueType.Temperature:
+            case ReactorInternals.ReactorValueType.CoreTemperature:
                 return Compare(reactor.temperature);
             default:
                 Debug.LogWarning("Requirement not implemented " + requirmentType);

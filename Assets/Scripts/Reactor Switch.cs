@@ -20,13 +20,16 @@ public class ReactorSwitch : MonoBehaviour
                 reactor.powerLevel = f;
                 break;
             case ReactorInternals.ReactorValueType.Pump:
-                reactor.pumpPower = f;
+                reactor.circulationPumps[index] = f;
+                break;
+            case ReactorInternals.ReactorValueType.CondensePump:
+                reactor.condensePump = f;
                 break;
             case ReactorInternals.ReactorValueType.Rods:
                 reactor.controlRods[index] = f;
                 break;
-            case ReactorInternals.ReactorValueType.Temperature:
-                Debug.LogWarning("Cannot change reactor temperature from switch!");
+            default:
+                Debug.LogWarning("Not implemented switch!" + valueType);
                 break;
         }
     }

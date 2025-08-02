@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1249659580005970542}
   - component: {fileID: 3591844922445405605}
   - component: {fileID: 2174029962969111826}
+  - component: {fileID: 65917123354777804}
   m_Layer: 0
   m_Name: indicator_light01
   m_TagString: Untagged
@@ -87,3 +88,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &65917123354777804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2502309116540046670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77f4311530b4eb044b65cad0ef560a10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightType: 0
