@@ -20,27 +20,27 @@ public class MainMenuAudioSlider : MonoBehaviour
 
     public Transform target;
 
-    private void Start()
-    {
-        _mainMixer = audioMixerGroup.audioMixer;
+    //private void Start()
+    //{
+    //    _mainMixer = audioMixerGroup.audioMixer;
 
-        //InitializeAudioSettings();
-        foreach (var param in _mainMixer.FindMatchingGroups(string.Empty))
-        {
-            Debug.Log("Exposed Parameter: " + param.name);
-        }
+    //    //InitializeAudioSettings();
+    //    foreach (var param in _mainMixer.FindMatchingGroups(string.Empty))
+    //    {
+    //        Debug.Log("Exposed Parameter: " + param.name);
+    //    }
 
-        Debug.Log("_mainMixer.name: " + _mainMixer.name);
+    //    Debug.Log("_mainMixer.name: " + _mainMixer.name);
 
-        var parameters = _mainMixer.GetFloat("Master", out float value);
-        Debug.Log("Parameter found: " + parameters + " value: " + value);
+    //    var parameters = _mainMixer.GetFloat("Master", out float value);
+    //    Debug.Log("Parameter found: " + parameters + " value: " + value);
 
-        var parameters2 = _mainMixer.GetFloat("MasterVolume", out float value2);
-        Debug.Log("Parameter found: " + parameters2 + " value: " + value2);
+    //    var parameters2 = _mainMixer.GetFloat("MasterVolume", out float value2);
+    //    Debug.Log("Parameter found: " + parameters2 + " value: " + value2);
 
-        var parameters3 = _mainMixer.GetFloat("Volume", out float value3);
-        Debug.Log("Parameter found: " + parameters3 + " value: " + value3);
-    }
+    //    var parameters3 = _mainMixer.GetFloat("Volume", out float value3);
+    //    Debug.Log("Parameter found: " + parameters3 + " value: " + value3);
+    //}
 
 
 

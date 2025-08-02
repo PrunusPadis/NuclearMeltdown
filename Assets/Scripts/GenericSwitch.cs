@@ -8,6 +8,9 @@ public class GenericSwitch : MonoBehaviour , IPointerEnterHandler, IPointerExitH
     public UnityEvent OnActivate = new();
     public UnityEvent OnDeactivate = new();
     public UnityEvent<bool> OnValueChanged = new();
+    public UnityEvent PointerEntered = new();
+    public UnityEvent PointerExited = new();
+    public bool switchable = false;
 
     public float maxValue = 1;
     public float minValue = 0;
@@ -23,7 +26,7 @@ public class GenericSwitch : MonoBehaviour , IPointerEnterHandler, IPointerExitH
 
     public virtual void OnPointerDown(PointerEventData eventData)
     {
-
+        //Debug.Log("GenericSwitch OnPointerDown");
         OnActivate.Invoke();
         isOn = !isOn;
         OnValueChanged.Invoke(isOn);
@@ -33,21 +36,29 @@ public class GenericSwitch : MonoBehaviour , IPointerEnterHandler, IPointerExitH
 
     public virtual void OnPointerEnter(PointerEventData eventData)
     {
+        //Debug.Log("GenericSwitch OnPointerEnter");
         meshRenderer.material = highlightMaterial;
         transform.localScale = Vector3.one * 1.1f; //TODO feedback
+        PointerEntered.Invoke();
     }
 
     public virtual void OnPointerExit(PointerEventData eventData)
     {
+        //Debug.Log("GenericSwitch OnPointerExit");
         transform.localScale = Vector3.one; //TODO feedback
         meshRenderer.material = defaultMaterial;
+        PointerExited.Invoke();
     }
 
     public virtual void OnPointerUp(PointerEventData eventData)
     {
+        //Debug.Log("GenericSwitch OnPointerUp");
         OnDeactivate.Invoke();
-        isOn = !isOn;
-        OnValueChanged.Invoke(isOn);
+        if (!switchable)
+        {
+            isOn = !isOn;
+            OnValueChanged.Invoke(isOn);
+        }
         UpdateSwitch();
     }
 
