@@ -32,7 +32,7 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private GameObject rotatePageTarget = null;
     private bool rotating = false;
     private int rotationDir = 0;
-    private float rotationSpeed = 1.5f;
+    private float rotationSpeed = 0.01f;
 
     public void Start()
     {
@@ -45,6 +45,7 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         originalPos = manual.transform.position;
         hidepos = hideposObj.transform.position;
         showpos = showposObj.transform.position;
+        Debug.Log("maxPages: "+ maxPages);
     }
 
     public void ShowManual()
@@ -74,33 +75,33 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void NextPage()
     {
-        Debug.Log("start NextPage currentPage" + currentPage);
+        Debug.Log("start NextPage currentPage " + currentPage);
         var pageToTurn = pages[currentPage];
         rotatePageTarget = pageToTurn;
-        rotating = true;
         rotationDir = 1;
+        rotating = true;
 
         //pageToTurn.transform.rotation = new Quaternion(0, 0, 180, 0);
         //pageToTurn.transform.rotation = new Quaternion(0,0,0,0);
 
         currentPage = currentPage + 1 < maxPages ? currentPage + 1 : currentPage;
 
-        Debug.Log("NextPage currentPage" + currentPage);
+        Debug.Log("NextPage currentPage " + currentPage);
     }
 
     public void PreviousPage()
     {
-        Debug.Log("start PreviousPage currentPage" + currentPage);
+        Debug.Log("start PreviousPage currentPage " + currentPage);
+        currentPage = currentPage - 1 > 0 ? currentPage - 1 : 0;
         var pageToTurn = pages[currentPage];
         //pageToTurn.transform.rotation = new Quaternion(0, 0, 0, 0);
 
-        currentPage = currentPage - 1 > 0 ? currentPage - 1 : 0;
 
         rotatePageTarget = pageToTurn;
-        rotating = true;
         rotationDir = -1;
+        rotating = true;
 
-        Debug.Log("PreviousPage currentPage" + currentPage);
+        Debug.Log("PreviousPage currentPage " + currentPage);
     }
 
     private void Update()
