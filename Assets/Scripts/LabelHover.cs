@@ -1,23 +1,33 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class LabelHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public float hoverScale = 1; // Scale on hover
-    private Vector3 originalScale;
-
-    void Start()
+    string text;
+    void Awake()
     {
-        originalScale = transform.localScale;
+        text = gameObject.GetComponentInChildren<TextMeshProUGUI>().text;
+
+
     }
+    //public Vector3 labalePosition ; // Scale on hover
+    //private Vector3 originalPosition;
+
+    //void Start()
+    //{
+    //    originalPosition = transform.position;
+    //}
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        transform.localScale *= hoverScale;
+        ToolTipManager.Instance.PlaySubtitles(text);
+        //transform.position = labalePosition;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        transform.localScale = originalScale;
+        ToolTipManager.Instance.ClearSubtitles();
+        // transform.position = originalPosition;
     }
 }
