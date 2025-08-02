@@ -3,11 +3,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler
+public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler, IPointerDownHandler
 {
     public GameObject manual;
     public GameObject pagesParent;
     public HideManual hideManualCollider;
+    public GameObject hideposObj;
+    public GameObject showposObj;
 
     public List<GameObject> pages;
 
@@ -33,7 +35,8 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         maxPages = pagesParent.transform.childCount;
         hoverPos = new Vector3(manual.transform.position.x, manual.transform.position.y, manual.transform.position.z - 0.02f);
         originalPos = manual.transform.position;
-        hidepos = manual.transform.position;
+        hidepos = hideposObj.transform.position;
+        showpos = showposObj.transform.position;
     }
 
     public void ShowManual()
@@ -87,7 +90,7 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("ManualHandler OnPointerEnter");
+        //Debug.Log("ManualHandler OnPointerEnter");
         if (!manualShown)
         {
             manual.transform.position = hoverPos;
@@ -96,7 +99,7 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("ManualHandler OnPointerExit");
+        //Debug.Log("ManualHandler OnPointerExit");
         if (!manualShown)
         {
             manual.transform.position = originalPos;
@@ -105,7 +108,16 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        Debug.Log("ManualHandler OnPointerUp");
+        //Debug.Log("ManualHandler OnPointerUp, manualShown: " + manualShown);
+        //if (!manualShown)
+        //{
+        //    ShowManual();
+        //}
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        //throw new System.NotImplementedException();
         if (!manualShown)
         {
             ShowManual();
