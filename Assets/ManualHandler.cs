@@ -92,6 +92,7 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         }
 
         Debug.Log("start NextPage currentPage " + currentPage);
+        
         var pageToTurn = pages[currentPage];
         rotatePageTarget = pageToTurn;
         rotationDir = 1;

@@ -120,8 +120,14 @@ public class ReactorMeter : MonoBehaviour
       
     }
 #if UNITY_EDITOR
+
+    public bool syncWithReactor;
     void OnValidate()
     {
+        if (syncWithReactor)
+        {
+            UpdateMeterValue();
+        }
         UpdateMeterVisual();
     }
 
