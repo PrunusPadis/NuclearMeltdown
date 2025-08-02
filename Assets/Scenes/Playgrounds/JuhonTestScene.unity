@@ -300,11 +300,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!1 &1391224383 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6724745849777232276, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-  m_PrefabInstance: {fileID: 1683432695}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1683432695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -353,126 +348,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2634280012145900738, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2634280012145900738, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2634280012145900738, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2634280012145900738, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2634280012145900738, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -1072
-      objectReference: {fileID: 0}
-    - target: {fileID: 2634280012145900738, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2634280012145900738, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4174756690898120441, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: SubtitleText
-      value: 
-      objectReference: {fileID: 1391224383}
     - target: {fileID: 5078027494257530647, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
       propertyPath: m_Name
       value: SubtitleManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_text
-      value: Agent X you are tasked to shutdown the reactor, asdasdasd asdasdasd
-        asasd asdasd
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_fontSize
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_margin.w
-      value: -53.715836
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_margin.x
-      value: -468.31067
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_margin.y
-      value: -13.007904
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_margin.z
-      value: -496.79358
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_fontStyle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_fontSizeMax
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_fontSizeMin
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_isOrthographic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_TextWrappingMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_TextStyleHashCode
-      value: -1183493901
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 1024
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_enableVertexGradient
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329334605515752518, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
-      value: 1801810542
-      objectReference: {fileID: 0}
-    - target: {fileID: 6724745849777232276, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_Name
-      value: SubtitleText
-      objectReference: {fileID: 0}
-    - target: {fileID: 8420378479053820699, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
