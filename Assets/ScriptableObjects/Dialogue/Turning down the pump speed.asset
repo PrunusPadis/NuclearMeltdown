@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d47ee17a2054c469debb87dacf0ea1, type: 3}
   m_Name: Turning down the pump speed
   m_EditorClassIdentifier: 
-  text: After you have turned the power down, decrease the power on pumps to reduce
-    the water flow
-  clip: {fileID: 0}
-  duration: 0
+  parts:
+  - text: After you have turned the power down, decrease the power on pumps to reduce
+      the water flow
+    clip: {fileID: 8300000, guid: c6a2edd567132419284ce8885c22c125, type: 3}
+    duration: 6
