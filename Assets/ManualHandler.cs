@@ -86,6 +86,12 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void NextPage()
     {
+        if (currentPage > 0)
+        {
+            // hide previous page so it doesnt cliopåp
+            pages[currentPage - 1].SetActive(false);
+        }
+
         Debug.Log("start NextPage currentPage " + currentPage);
         var pageToTurn = pages[currentPage];
         rotatePageTarget = pageToTurn;
@@ -93,10 +99,10 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         rotating = true;
 
         var rot = rotatePageTarget.transform.eulerAngles;
-        rot.z = 0 + currentPage;
+        rot.z = 0;
         rotatePageTarget.transform.eulerAngles = rot;
 
-        currentPage = currentPage + 1 < maxPages ? currentPage + 1 : currentPage;
+        currentPage = currentPage + 1 <= maxPages ? currentPage + 1 : currentPage;
 
         AudioPlayer.PlayClipAtPoint(this, audioclip, transform.position, 1);
         //Debug.Log("NextPage currentPage " + currentPage);
@@ -106,13 +112,15 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public void PreviousPage()
     {
         Debug.Log("start PreviousPage currentPage " + currentPage);
-        currentPage = currentPage - 1 > 0 ? currentPage - 1 : 0;
+        currentPage = currentPage - 1 >= 0 ? currentPage - 1 : 0;
         var pageToTurn = pages[currentPage];
+        rotatePageTarget = pageToTurn;
         //pageToTurn.transform.rotation = new Quaternion(0, 0, 0, 0);
 
+        pageToTurn.SetActive(true);
 
         var rot = rotatePageTarget.transform.eulerAngles;
-        rot.z = 180 + currentPage;
+        rot.z = 180;
         rotatePageTarget.transform.eulerAngles = rot;
 
         //Debug.Log("PreviousPage currentPage " + currentPage);
