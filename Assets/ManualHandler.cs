@@ -88,7 +88,6 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (currentPage > 0)
         {
-            // hide previous page so it doesnt cliopåp
             pages[currentPage - 1].SetActive(false);
         }
 
@@ -118,6 +117,10 @@ public class ManualHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         //pageToTurn.transform.rotation = new Quaternion(0, 0, 0, 0);
 
         pageToTurn.SetActive(true);
+        if (currentPage -1 >= 0)
+        {
+            pages[currentPage - 1].SetActive(true);
+        }
 
         var rot = rotatePageTarget.transform.eulerAngles;
         rot.z = 180;
