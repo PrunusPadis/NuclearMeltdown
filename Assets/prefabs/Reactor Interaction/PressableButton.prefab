@@ -80,6 +80,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2934779408876727823, guid: 4e8ae6e71bf9b74419df0e0373aa43df, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2934779408876727823, guid: 4e8ae6e71bf9b74419df0e0373aa43df, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.027
+      objectReference: {fileID: 0}
+    - target: {fileID: 2934779408876727823, guid: 4e8ae6e71bf9b74419df0e0373aa43df, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5550334644359160556, guid: 4e8ae6e71bf9b74419df0e0373aa43df, type: 3}
       propertyPath: m_Name
       value: button1 (1)
@@ -87,8 +99,50 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8730289504280150236, guid: 4e8ae6e71bf9b74419df0e0373aa43df, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6362766205446491031}
   m_SourcePrefab: {fileID: 100100000, guid: 4e8ae6e71bf9b74419df0e0373aa43df, type: 3}
+--- !u!1 &335193356278203973 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8730289504280150236, guid: 4e8ae6e71bf9b74419df0e0373aa43df, type: 3}
+  m_PrefabInstance: {fileID: 9047415646835967641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6362766205446491031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335193356278203973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad5f9c335bf4c04bbea2271c55fb7b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  maxValue: 1
+  minValue: 0
+  isOn: 0
+  defaultMaterial: {fileID: 2100000, guid: 7817417c864bc7842bf87bef05b82104, type: 2}
+  highlightMaterial: {fileID: 2100000, guid: 2f010beb83a2db94b92bbb0669f89035, type: 2}
+  meshRenderer: {fileID: 7689197385466657975}
+  onPos: {x: 0, y: 0.0137, z: 0}
+  offPos: {x: 0, y: 0.027, z: 0}
+--- !u!23 &7689197385466657975 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1674042531087792686, guid: 4e8ae6e71bf9b74419df0e0373aa43df, type: 3}
+  m_PrefabInstance: {fileID: 9047415646835967641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9173952289257316048 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 206758317675534409, guid: 4e8ae6e71bf9b74419df0e0373aa43df, type: 3}

@@ -349,42 +349,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6686993804662259364, guid: 1ef7eaa9f7ffe934393c91897f047c7f, type: 3}
-      propertyPath: condenseMod
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 6686993804662259364, guid: 1ef7eaa9f7ffe934393c91897f047c7f, type: 3}
-      propertyPath: condensePump
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6686993804662259364, guid: 1ef7eaa9f7ffe934393c91897f047c7f, type: 3}
-      propertyPath: steamPressureMod
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6686993804662259364, guid: 1ef7eaa9f7ffe934393c91897f047c7f, type: 3}
-      propertyPath: automaticRods.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6686993804662259364, guid: 1ef7eaa9f7ffe934393c91897f047c7f, type: 3}
-      propertyPath: 'automaticRods.Array.data[0]'
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6686993804662259364, guid: 1ef7eaa9f7ffe934393c91897f047c7f, type: 3}
-      propertyPath: 'automaticRods.Array.data[1]'
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6686993804662259364, guid: 1ef7eaa9f7ffe934393c91897f047c7f, type: 3}
-      propertyPath: circulationPumps.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6686993804662259364, guid: 1ef7eaa9f7ffe934393c91897f047c7f, type: 3}
-      propertyPath: 'circulationPumps.Array.data[0]'
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6686993804662259364, guid: 1ef7eaa9f7ffe934393c91897f047c7f, type: 3}
-      propertyPath: 'circulationPumps.Array.data[1]'
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 7072905239905374985, guid: 1ef7eaa9f7ffe934393c91897f047c7f, type: 3}
       propertyPath: m_Name
       value: Reactor
@@ -413,6 +377,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1135995198284294319, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1135995198284294319, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7817417c864bc7842bf87bef05b82104, type: 2}
+    - target: {fileID: 1135995198284294319, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2f010beb83a2db94b92bbb0669f89035, type: 2}
     - target: {fileID: 8233639809589907009, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
