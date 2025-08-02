@@ -37,11 +37,11 @@ public class ScreenShake : MonoBehaviour
     }
 
     // for testing
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            ScreenShake.Instance.Shake(1.0f, 0.1f);
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyUp(KeyCode.S))
+    //    {
+    //        ScreenShake.Instance.Shake(1.0f, 0.1f);
+    //    }
+    //}
 }
