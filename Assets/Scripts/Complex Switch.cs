@@ -8,6 +8,9 @@ public class ComplexSwitch : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 {
     public UnityEvent OnActivate = new();
     public UnityEvent OnDeactivate = new();
+
+    public UnityEvent PointerEntered = new();
+    public UnityEvent PointerExited = new();
     public UnityEvent<float> OnValueChanged = new();
 
     public float maxValue = 1;
@@ -46,6 +49,7 @@ public class ComplexSwitch : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public virtual void OnPointerEnter(PointerEventData eventData)
     {
+        PointerEntered.Invoke();
         meshRenderer.material = highlightMaterial; 
         transform.localScale = Vector3.one * 1.1f; //TODO feedback
     }
@@ -54,6 +58,7 @@ public class ComplexSwitch : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         transform.localScale = Vector3.one; //TODO feedback
         meshRenderer.material = defaultMaterial;
+        PointerExited.Invoke();
     }
 
     public virtual void OnPointerUp(PointerEventData eventData)

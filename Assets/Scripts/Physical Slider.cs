@@ -9,8 +9,7 @@ public class PhysicalSlider : ComplexSwitch, IPointerEnterHandler, IPointerExitH
 {
 
 
-    public UnityEvent PointerEntered = new();
-    public UnityEvent PointerExited = new();
+
 
     public Transform maxPosAnchor;
     public Transform minPosAnchor;

@@ -40,13 +40,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2670011618637594420}
     m_Modifications:
+    - target: {fileID: 1852583069610142476, guid: 25bb974f4ecc2a74d9c11397cd58e25c, type: 3}
+      propertyPath: isOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852583069610142476, guid: 25bb974f4ecc2a74d9c11397cd58e25c, type: 3}
+      propertyPath: onPos.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852583069610142476, guid: 25bb974f4ecc2a74d9c11397cd58e25c, type: 3}
+      propertyPath: offPos.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 5196301220833794058, guid: 25bb974f4ecc2a74d9c11397cd58e25c, type: 3}
       propertyPath: m_Name
       value: button3
       objectReference: {fileID: 0}
     - target: {fileID: 5347644624464976309, guid: 25bb974f4ecc2a74d9c11397cd58e25c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.00000004371139
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5347644624464976309, guid: 25bb974f4ecc2a74d9c11397cd58e25c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -54,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5347644624464976309, guid: 25bb974f4ecc2a74d9c11397cd58e25c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5347644624464976309, guid: 25bb974f4ecc2a74d9c11397cd58e25c, type: 3}
       propertyPath: m_LocalRotation.z
@@ -107,15 +119,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4822267698972271997, guid: 25bb974f4ecc2a74d9c11397cd58e25c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3910081242866944469}
-    - targetCorrespondingSourceObject: {fileID: 4822267698972271997, guid: 25bb974f4ecc2a74d9c11397cd58e25c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5260947406036925483}
   m_SourcePrefab: {fileID: 100100000, guid: 25bb974f4ecc2a74d9c11397cd58e25c, type: 3}
---- !u!23 &1758904111256254567 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 4525946906272812134, guid: 25bb974f4ecc2a74d9c11397cd58e25c, type: 3}
-  m_PrefabInstance: {fileID: 2785341417592747009}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7227054397993865596 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4822267698972271997, guid: 25bb974f4ecc2a74d9c11397cd58e25c, type: 3}
@@ -142,42 +146,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.08, y: 0.06, z: 0.08}
   m_Center: {x: 0, y: 0.023611842, z: 0.015448632}
---- !u!114 &5260947406036925483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7227054397993865596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f22c520165252d48a08419ef527638e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnActivate:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeactivate:
-    m_PersistentCalls:
-      m_Calls: []
-  OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  PointerEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  PointerExited:
-    m_PersistentCalls:
-      m_Calls: []
-  switchable: 1
-  maxValue: 1
-  minValue: 0
-  isOn: 0
-  defaultMaterial: {fileID: 2100000, guid: 7817417c864bc7842bf87bef05b82104, type: 2}
-  highlightMaterial: {fileID: 2100000, guid: 2f010beb83a2db94b92bbb0669f89035, type: 2}
-  meshRenderer: {fileID: 1758904111256254567}
-  onPos: {x: 0, y: 90, z: 0}
-  offPos: {x: 0, y: 180, z: 0}
 --- !u!4 &8584898977741642129 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5873878507899841936, guid: 25bb974f4ecc2a74d9c11397cd58e25c, type: 3}

@@ -188,6 +188,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 296632786089249484, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0808
+      objectReference: {fileID: 0}
+    - target: {fileID: 422017760268550726, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 422017760268550726, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: maxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 422017760268550726, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: minValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422017760268550726, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: sensitivity
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 422017760268550726, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateAudioValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 954022879459314201, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 954022879459314201, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: maxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 954022879459314201, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: minValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 954022879459314201, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: sensitivity
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 954022879459314201, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateAudioValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957497814392442700, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0808
+      objectReference: {fileID: 0}
     - target: {fileID: 3317132207566305092, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
       propertyPath: OnActivate.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -236,6 +284,30 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 7817417c864bc7842bf87bef05b82104, type: 2}
+    - target: {fileID: 7339763026408603844, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7339763026408603844, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: maxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7339763026408603844, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: minValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7339763026408603844, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: sensitivity
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7339763026408603844, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateAudioValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8054702616226988150, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: minValue
+      value: -80
+      objectReference: {fileID: 0}
     - target: {fileID: 8233639809589907009, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -276,15 +348,52 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8343798677907834257, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0808
+      objectReference: {fileID: 0}
     - target: {fileID: 8721242002406987003, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
       propertyPath: m_Name
       value: mainmenu_control_desk
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857357273845138756, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857357273845138756, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: maxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857357273845138756, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: minValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857357273845138756, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: sensitivity
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857357273845138756, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateAudioValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875803884612750798, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0808
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6799595396744725156, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7545845239055878431, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 157550571647348771, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 714260046163396092, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 7c7d85b9e8bde4db88686a1b92281def, type: 3}

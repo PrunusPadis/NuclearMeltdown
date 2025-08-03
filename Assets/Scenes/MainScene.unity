@@ -264,6 +264,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 83081369847587108, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 83081369847587108, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2210709179830319305, guid: 36edabbc73f49430abd5800ae42a34a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -448,6 +456,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 318045626808814556, guid: 1bd9517e6eaa34f0cb1024b526785030, type: 3}
+      propertyPath: m_text
+      value: "----------------------------\r\nCirculation system - \u041A\u0440\u043E\u0432\u0435\u043D\u043E\u0441\u043D\u0430\u044F
+        \u0441\u0438\u0441\u0442\u0435\u043C\u0430\r\n\r------------------------------------------------------\r\nTwo
+        pumps circulate water to the core where it heats to steam. The steam is fed
+        into the turbine which generates energy. After turbine steam is condensed
+        into water and then fed back to the generator.\r\n\r\nwater pressure - \u0432\u043E\u0434\u044F\u043D\u043E\u0435
+        \u0434\u0430\u0432\u043B\u0435\u043D\u0438\u0435\r\nwater temperature - \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430
+        \u0432\u043E\u0434\u044B\r\nsteam pressure - \u043F\u0430\u0440\u043E\u0432\u043E\u0435
+        \u0434\u0430\u0432\u043B\u0435\u043D\u0438\u0435\r\nsteam temperature - \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430
+        \u043F\u0430\u0440\u0430s\r\nvent Steam - \u0421\u0431\u0440\u043E\u0441
+        \u043F\u0430\u0440\u0430\r\n\r\n------------------------------------------------------\r\nCondensation
+        system - \u0421\u0438\u0441\u0442\u0435\u043C\u0430 \u043A\u043E\u043D\u0434\u0435\u043D\u0441\u0430\u0446\u0438\u0438\r\n\r------------------------------------------------------\r\nCondensation
+        pump cycles cool water which is used to cooldown and condensate the steam
+        into water. If the steam is not cooled down the reactor might overheat.\r\n\r\ncondense
+        temperature - T\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430
+        \u043A\u043E\u043D\u0434\u0435\u043D\u0441\u0430\u0442\u043D\u043E\u0439
+        \u0432\u043E\u0434\u044B\r\nCondense Pressure - \u0414\u0430\u0432\u043B\u0435\u043D\u0438\u0435
+        \u043A\u043E\u043D\u0434\u0435\u043D\u0441\u0430\u0446\u0438\u0438"
+      objectReference: {fileID: 0}
+    - target: {fileID: 318045626808814556, guid: 1bd9517e6eaa34f0cb1024b526785030, type: 3}
+      propertyPath: m_fontSize
+      value: 0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 318045626808814556, guid: 1bd9517e6eaa34f0cb1024b526785030, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.006
+      objectReference: {fileID: 0}
     - target: {fileID: 1239066091811357485, guid: 1bd9517e6eaa34f0cb1024b526785030, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.003
@@ -491,6 +527,89 @@ PrefabInstance:
     - target: {fileID: 2860168443906466084, guid: 1bd9517e6eaa34f0cb1024b526785030, type: 3}
       propertyPath: m_Name
       value: ManualHandler
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212873486768574680, guid: 1bd9517e6eaa34f0cb1024b526785030, type: 3}
+      propertyPath: m_text
+      value: "------------------------------------------------------\r\nEmergency
+        systems - \u0410\u0432\u0430\u0440\u0438\u0439\u043D\u044B\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B.\r\n\r------------------------------------------------------\r\nThere
+        are multiple systems to minimize the possibility of nuclear meltdown. \r\n\r\nEmergency
+        Generator - \u0410\u0432\u0430\u0440\u0438\u0439\u043D\u044B\u0439 \u0433\u0435\u043D\u0435\u0440\u0430\u0442\u043E\u0440\r\nEmergency
+        pump - \u0410\u0432\u0430\u0440\u0438\u0439\u043D\u044B\u0439 \u043D\u0430\u0441\u043E\u0441\n\r\n------------------------------------------------------\r\nSCRAM
+        - \u0421\u043A\u0440\u0435\u043C\r\n\r------------------------------------------------------\r\nAutomatic
+        system that will shutdown the reactor. The system will do onetime dumping
+        of emergency containers of boric acid into the reactor.\r\n\r\nEnable cram
+        - \u0412\u043A\u043B\u044E\u0447\u0438\u0442\u044C \u0421\u043A\u0440\u0435\u043C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212873486768574680, guid: 1bd9517e6eaa34f0cb1024b526785030, type: 3}
+      propertyPath: m_fontSize
+      value: 0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212873486768574680, guid: 1bd9517e6eaa34f0cb1024b526785030, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212873486768574680, guid: 1bd9517e6eaa34f0cb1024b526785030, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379060769585229948, guid: 1bd9517e6eaa34f0cb1024b526785030, type: 3}
+      propertyPath: m_text
+      value: "------------------------------------------------------\r\nPumps - \u043D\u0430\u0441\u043E\u0441\r\n\r------------------------------------------------------\r\nPump
+        power level can be finetuned to optimize the water flow. Pumps run usually
+        on nuclear reactors own power. During startup and emergencies separator diesel
+        generators can be used to keep the water flowing.\r\n\r\nCirculation pump
+        - \u0426\u0438\u0440\u043A\u0443\u043B\u044F\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+        \u043D\u0430\u0441\u043E\u0441\r\n-These pumps circulate the water which
+        is fed into the reactor core.\r\nCondensation pump - \u041A\u043E\u043D\u0434\u0435\u043D\u0441\u0430\u0442\u043D\u044B\u0439
+        \u043D\u0430\u0441\u043E\u0441\r\n-Pumps the cool water to condensate steam\r\nEmergency
+        pump - \u0410\u0432\u0430\u0440\u0438\u0439\u043D\u044B\u0439 \u043D\u0430\u0441\u043E\u0441\r\n-Activates
+        automatically temperature is high or water flow is low\r\n\r\n------------------------------------------------------\r\nEnergy
+        generation - \u0412\u044B\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u044D\u043D\u0435\u0440\u0433\u0438\u0438\r\n\r------------------------------------------------------\r\nThe
+        reactor generates energy by feeding hot steam into a turbine. Hotter the
+        turbine and more water flow there is more steam will be generated which leads
+        to more energy generation. The generator connection to the grid can be shut
+        off in case of unstable energy production.\r\n\r\nGenerator Power- \u041C\u043E\u0449\u043D\u043E\u0441\u0442\u044C
+        \u0433\u0435\u043D\u0435\u0440\u0430\u0442\u043E\u0440\u0430\r\nEmergency
+        Generator - \u0410\u0432\u0430\u0440\u0438\u0439\u043D\u044B\u0439 \u0433\u0435\u043D\u0435\u0440\u0430\u0442\u043E\u0440"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379060769585229948, guid: 1bd9517e6eaa34f0cb1024b526785030, type: 3}
+      propertyPath: m_fontSize
+      value: 0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379060769585229948, guid: 1bd9517e6eaa34f0cb1024b526785030, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 5803212658245728391, guid: 1bd9517e6eaa34f0cb1024b526785030, type: 3}
+      propertyPath: m_text
+      value: "-------------------------------------------------------------\nRBMK
+        Reactor Manual\n\r-------------------------------------------------------------\nControl
+        rods - \u0443\u043F\u0440\u0430\u0432\u043B\u044F\u044E\u0449\u0438\u0439
+        \u0441\u0442\u0435\u0440\u0436\u0435\u043D\u044C\n-------------------------------------------------------------\nThis
+        reactor has 6 different control rods. Rods 1,2,3,4 are manually controlled.
+        Automatic control rods 1 and 2 try to keep the system stable.\r\n\r\nRising
+        control rods will increase the reactor power since more neutrons will bounce
+        around and the control rods inhibiting effect will decrease.\r\n\r\nAutomatic
+        rods - \u0410\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0435
+        \u0441\u0442\u0435\u0440\u0436\u043D\u0438\r\n-Automatic rods will try to
+        keep the reactor runninning\r\n\rLock rods - \u0417\u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u0442\u044C
+        \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0435
+        \u0441\u0442\u0435\u0440\u0436\u043D\u0438\r\n\rDisable rods - \u041E\u0442\u043A\u043B\u044E\u0447\u0438\u0442\u044C
+        \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0435
+        \u0441\u0442\u0435\u0440\u0436\u043D\u0438\nCore Temperature - \u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430
+        \u044F\u0434\u0440\u0430\n\n------------------------------------------------------\r\nWater
+        flow - \u041F\u043E\u0442\u043E\u043A \u0432\u043E\u0434\u044B\r\n\r------------------------------------------------------\r\nThe
+        reactor system consists of two distinct water systems. The circulation system
+        is for the generation of energy. The condensation system will cooldown the
+        steam produced by the reactor. \r\n\r\n\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5803212658245728391, guid: 1bd9517e6eaa34f0cb1024b526785030, type: 3}
+      propertyPath: m_fontSize
+      value: 0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 5803212658245728391, guid: 1bd9517e6eaa34f0cb1024b526785030, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -845,89 +964,118 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 143823705919016807, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5.964334e-10
+    - target: {fileID: 312515406567466318, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1189788239}
+    - target: {fileID: 748174215100595332, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 433008766217822266, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9182161
-      objectReference: {fileID: 0}
-    - target: {fileID: 433008766217822266, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.39607978
-      objectReference: {fileID: 0}
-    - target: {fileID: 456886487474149726, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 793846256677747840, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: targetIndex
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 838563144027982896, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 2006978425307190264, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 2581617846610830519, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: targetIndex
+    - target: {fileID: 748174215100595332, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1189788239}
+    - target: {fileID: 748174215100595332, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 3989095738805061742, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: value
-      value: 10
+    - target: {fileID: 748174215100595332, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SteamVent
       objectReference: {fileID: 0}
+    - target: {fileID: 748174215100595332, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ReactorInternals, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 748174215100595332, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1363952789369880894, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.638
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742625177307218525, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: m_text
+      value: "\u0443\u043F\u0440\u0430\u0432\u043B\u044F\u044E\u0449\u0438\u0439
+        \u0441\u0442\u0435\u0440\u0436\u0435\u043D\u044C 2"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113868840239349258, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113868840239349258, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1189788239}
+    - target: {fileID: 2113868840239349258, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113868840239349258, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ManualCram
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113868840239349258, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ReactorInternals, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113868840239349258, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2350548736226783207, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1189788239}
+    - target: {fileID: 2938126664763465548, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: m_text
+      value: "\u0410\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0435
+        \u0441\u0442\u0435\u0440\u0436\u043D\u0438 1"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568156081145093418, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1189788239}
+    - target: {fileID: 3753227904514855317, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1189788239}
     - target: {fileID: 3989095738805061742, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
       propertyPath: reactor
       value: 
       objectReference: {fileID: 1189788239}
-    - target: {fileID: 3989095738805061742, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: meterType
-      value: 10
+    - target: {fileID: 4047543586635178742, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: m_Name
+      value: Vent Steam
       objectReference: {fileID: 0}
-    - target: {fileID: 3989095738805061742, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: targetIndex
-      value: 1
+    - target: {fileID: 5245641063603884698, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: m_text
+      value: "\u0443\u043F\u0440\u0430\u0432\u043B\u044F\u044E\u0449\u0438\u0439
+        \u0441\u0442\u0435\u0440\u0436\u0435\u043D\u044C 4"
       objectReference: {fileID: 0}
-    - target: {fileID: 3989095738805061742, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: syncWithReactor
-      value: 0
+    - target: {fileID: 6357008271475908571, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1189788239}
+    - target: {fileID: 6714656868982227547, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: m_text
+      value: "\u0443\u043F\u0440\u0430\u0432\u043B\u044F\u044E\u0449\u0438\u0439
+        \u0441\u0442\u0435\u0440\u0436\u0435\u043D\u044C 3"
       objectReference: {fileID: 0}
-    - target: {fileID: 6086556467657799596, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5.964334e-10
+    - target: {fileID: 6759127660484993329, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1189788239}
+    - target: {fileID: 6925326726353324717, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: m_text
+      value: "\u0443\u043F\u0440\u0430\u0432\u043B\u044F\u044E\u0449\u0438\u0439
+        \u0441\u0442\u0435\u0440\u0436\u0435\u043D\u044C 3"
       objectReference: {fileID: 0}
-    - target: {fileID: 6622262234465676359, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6622262234465676359, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: targetIndex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7587411867089437607, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 7690255043823698963, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.34202015
-      objectReference: {fileID: 0}
-    - target: {fileID: 7690255043823698963, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.9396926
-      objectReference: {fileID: 0}
-    - target: {fileID: 7714207208704536918, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: meterType
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7714207208704536918, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: targetIndex
-      value: 0
+    - target: {fileID: 7060334603365122376, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: m_text
+      value: "\u0421\u0431\u0440\u043E\u0441 \u043F\u0430\u0440\u0430"
       objectReference: {fileID: 0}
     - target: {fileID: 8233639809589907009, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -969,25 +1117,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8400358204382586484, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: m_text
+      value: "\u0410\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0435
+        \u0441\u0442\u0435\u0440\u0436\u043D\u0438 2"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450954777686747321, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: m_text
+      value: "\u0443\u043F\u0440\u0430\u0432\u043B\u044F\u044E\u0449\u0438\u0439
+        \u0441\u0442\u0435\u0440\u0436\u0435\u043D\u044C 2"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8464406826195138514, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: m_text
+      value: "\u0443\u043F\u0440\u0430\u0432\u043B\u044F\u044E\u0449\u0438\u0439
+        \u0441\u0442\u0435\u0440\u0436\u0435\u043D\u044C 4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560406196340442054, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
+      propertyPath: m_text
+      value: Emergency pump
+      objectReference: {fileID: 0}
     - target: {fileID: 8721242002406987003, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
       propertyPath: m_Name
       value: control_desk (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8721242002406987003, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8881816252061360050, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943964815653821774, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5.964334e-10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8948396469963670053, guid: f8d3d563380669648a3bef20f45dd0fa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5.964334e-10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1041,6 +1192,26 @@ PrefabInstance:
     - target: {fileID: 3041830292949596616, guid: 1ef7eaa9f7ffe934393c91897f047c7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686993804662259364, guid: 1ef7eaa9f7ffe934393c91897f047c7f, type: 3}
+      propertyPath: controlTemp
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686993804662259364, guid: 1ef7eaa9f7ffe934393c91897f047c7f, type: 3}
+      propertyPath: cramEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686993804662259364, guid: 1ef7eaa9f7ffe934393c91897f047c7f, type: 3}
+      propertyPath: meltDownTemp
+      value: 1100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686993804662259364, guid: 1ef7eaa9f7ffe934393c91897f047c7f, type: 3}
+      propertyPath: automaticRodSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686993804662259364, guid: 1ef7eaa9f7ffe934393c91897f047c7f, type: 3}
+      propertyPath: temperatureModifier
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 7072905239905374985, guid: 1ef7eaa9f7ffe934393c91897f047c7f, type: 3}
       propertyPath: m_Name

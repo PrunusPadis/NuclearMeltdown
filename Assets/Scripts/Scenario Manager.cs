@@ -89,9 +89,9 @@ public class ScenarioManager : MonoSingleton<ScenarioManager>
         }
     }
 
-    public void CramActivated()
+    public void AllertActivated()
     {
-        AudioPlayer.PlayClipAtPoint(this, CramClip, transform.position);
+        AudioPlayer.PlayClipAtPoint(this, CramClip, transform.position, 0.2f);
         GameOver = true;
     }
 

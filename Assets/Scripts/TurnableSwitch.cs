@@ -23,12 +23,16 @@ public class TurnableSwitch : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public Vector3 onPos;
     public Vector3 offPos;
 
+    public Sound sound;
+
     public virtual void OnPointerDown(PointerEventData eventData)
     {
         //Debug.Log("GenericSwitch OnPointerDown");
         OnActivate.Invoke();
         isOn = !isOn;
+        
         OnValueChanged.Invoke(isOn);
+        AudioPlayer.PlaySoundAtPoint(this, sound, transform.position);
         UpdateSwitch();
     }
 

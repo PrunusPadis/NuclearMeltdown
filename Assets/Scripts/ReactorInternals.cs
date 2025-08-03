@@ -8,8 +8,8 @@ public class ReactorInternals : MonoSingleton<ReactorInternals>
                                     WaterFlow, Cram, WaterPressure,Toggle, Generator, AutomaticRod,
                                     SteaFlow, SteamPressure, SteamTemperature,
                                      CondenseFlow, CondensePressure, CondenseTemperature, CondensePump,
-            EmergencyPump
-                                        };
+            EmergencyPump, AutomaticRodEnabled, CramEnabled, Generator1, Generator2
+    };
     [Header("Core")]
 
     public float powerLevel;
@@ -19,6 +19,9 @@ public class ReactorInternals : MonoSingleton<ReactorInternals>
     public float maxTemp;
     public float controlTemp;
 
+
+    public float meltDownTemp;
+
     [Header("Rods")]
 
     public float controlRodModifier = 10;
@@ -27,6 +30,11 @@ public class ReactorInternals : MonoSingleton<ReactorInternals>
     public List<float> automaticRods;
 
     public float automaticRodSpeed = 1;
+    public float automaticTemp = 400;
+    public float automaticTempLow = 350;
+
+    public bool automaticRodsEnabled = true;
+    public bool automaticRodsLocked = false;
     [Header("Pumps")]
 
     public float temperatureModifier = 10;
@@ -55,6 +63,8 @@ public class ReactorInternals : MonoSingleton<ReactorInternals>
 
     public float totalPumpPower;
 
+    public bool steamVent;
+
     [Header("Water Mods")]
 
     [SerializeField] float steamMod = 1;
@@ -71,7 +81,10 @@ public class ReactorInternals : MonoSingleton<ReactorInternals>
     public bool cramActivated;
     public bool cramEnabled;
 
-    
+    [Header("Generators")]
+
+    public bool generator1;
+    public bool generator2;
 
     private void Update()
     {
@@ -83,20 +96,32 @@ public class ReactorInternals : MonoSingleton<ReactorInternals>
         float newPower = 0;
         foreach (var controlRod in controlRods)
         {
-            newPower += Mathf.Pow(controlRod * controlRodModifier,2);
+            newPower += controlRod * controlRodModifier;
         }
-        foreach (var controlRod in automaticRods)
+        foreach (var aRod in automaticRods)
         {
-            //newPower += Mathf.Pow(controlRod * controlRodModifier, 2);
+            newPower += aRod * controlRodModifier;
+
+        }
+
+        AutomaticRods();
+        if (steamVent)
+        {
+            powerLevel = 0;
             
         }
-        
-
-        powerLevel = newPower;
-
+        else
+        {
+            powerLevel = newPower;
+        }
+       
+        if(powerLevel < 1)
+        {
+            generator1 = true;
+        }
         //water
         totalPumpPower = 0;
-        foreach(var f in circulationPumps)
+        foreach (var f in circulationPumps)
         {
             totalPumpPower += f;
         }
@@ -109,14 +134,28 @@ public class ReactorInternals : MonoSingleton<ReactorInternals>
         }
         else
         {
-            temperature = powerLevel  * temperatureModifier; //aka meltdow etc
+            temperature = powerLevel * temperatureModifier; //aka meltdow etc
+           
+        }
+        if(temperature > meltDownTemp)
+        {
             cramActivated = true;
-            ScenarioManager.Instance.CramActivated();
+            ScenarioManager.Instance.AllertActivated();
         }
 
         //steam
-        steamPressure = temperature * steamPressureMod;
-        steamFlow = steamPressure * steamFlowMod;
+        if (steamVent)
+        {
+            steamPressure = 0;
+            steamFlow = 0;
+           
+        }
+        else
+        {
+            steamPressure = temperature * steamPressureMod;
+            steamFlow = steamPressure * steamFlowMod;
+        }
+        
         steamTemperature = temperature * steamTempMod;
 
         //water cooldown
@@ -133,6 +172,93 @@ public class ReactorInternals : MonoSingleton<ReactorInternals>
 
     }
 
+    private void AutomaticRods()
+    {
+        if (automaticRodsLocked) return;
 
+        if (automaticRodsEnabled)
+        {
+            if (temperature < automaticTempLow)
+            {
+                for (int i = 0; i < automaticRods.Count; i++)
+                {
+                    automaticRods[i] += automaticRodSpeed;
+                    if (automaticRods[i] > 20)
+                    {
+                        automaticRods[i] = 20;
+                    }
+                }
+            }
+            else if(temperature > automaticTemp)
+            {
+                for (int i = 0; i < automaticRods.Count; i++)
+                {
+                    automaticRods[i] -= automaticRodSpeed;
+                    if (automaticRods[i] < 0)
+                    {
+                        automaticRods[i] = 0;
+                    }
+                   
+                   
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < automaticRods.Count; i++)
+            {
+                automaticRods[i] -= automaticRodSpeed;
+                if (automaticRods[i] < 0)
+                {
+                    automaticRods[i] = 0;
+                }
+            }
+        }
+        
+    }
 
+    public void LockAutoRods(bool b)
+    {
+        automaticRodsLocked = b;
+      
+    }
+
+    public void DisableAutoRods(bool b)
+    {
+        automaticRodsEnabled = b;
+
+    }
+
+    public void ManualCram(bool b)
+    {
+        cramActivated = b;
+        if (b)
+        {
+            ScenarioManager.Instance.AllertActivated();
+        }
+        
+    }
+
+    public void DisableCram(bool b)
+    {
+        cramEnabled = b;
+
+    }
+
+    public void EnableGenerator1(bool b)
+    {
+        generator1 = b;
+
+    }
+    public void EnableGenerator2(bool b)
+    {
+        generator2 = b;
+
+    }
+
+    public void SteamVent(bool b)
+    {
+        steamVent = b;
+
+    }
 }
